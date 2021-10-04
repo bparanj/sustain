@@ -26,6 +26,7 @@ gem "brakeman"
 # bundler-audit enables bundle audit which analyzes dependencies for known vulnerabilities
 gem "bundler-audit"
 gem 'rexml'
+gem "lograge"
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
