@@ -1,0 +1,23 @@
+version: "3.7"
+services:
+  rails-dev-environment:
+    image: davetron5000/sustainable-rails-dev:rails-6.1.4.1-ruby-3.0.2
+    # This says to basically start up the container
+    # and do nothing, since we know we're
+    # going to connect to it from our computer
+    entrypoint: "tail -f /dev/null"
+    ports:
+      - "9999:3000"
+    volumes:
+      - type: bind
+        source: "/home/bparanj/play/rails/sustain/widgets"
+        target: "/root/work"
+        consistency: "delegated"
+      - type: volume
+        target: /usr/dependencies-cache
+  db:
+    image: postgres:12
+    environment:
+      POSTGRES_PASSWORD: postgres
+  redis:
+    image: redis:5

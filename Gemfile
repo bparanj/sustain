@@ -20,6 +20,13 @@ gem 'jbuilder', '~> 2.7'
 
 gem "dotenv-rails", groups: [:development, :test]
 
+# Brakeman analyzes code for security vulnerabilities
+gem "brakeman"
+
+# bundler-audit enables bundle audit which analyzes dependencies for known vulnerabilities
+gem "bundler-audit"
+gem 'rexml'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
